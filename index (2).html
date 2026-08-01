@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OmniCore Solution Pvt Ltd — Consultancy &amp; Donations</title>
+<style>
+  :root{
+    --ink:#12213a;
+    --paper:#f6f3ec;
+    --gold:#b5872e;
+    --deep:#0c1626;
+    --line:#d8d0bd;
+    --muted:#5a6478;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Georgia', 'Iowan Old Style', serif;
+    line-height:1.6;
+  }
+  .sans{font-family:'Helvetica Neue', Arial, sans-serif;}
+
+  header{
+    background:var(--deep);
+    color:var(--paper);
+    padding:22px 6vw;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+  .brand{
+    font-size:1.3rem;
+    letter-spacing:0.04em;
+  }
+  .brand span{color:var(--gold);}
+  nav a{
+    color:var(--paper);
+    text-decoration:none;
+    margin-left:26px;
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    font-size:0.92rem;
+    letter-spacing:0.03em;
+    opacity:0.85;
+  }
+  nav a:hover{opacity:1; color:var(--gold);}
+
+  .hero{
+    padding:9vw 6vw 7vw;
+    border-bottom:1px solid var(--line);
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:40px;
+    align-items:center;
+  }
+  .hero h1{
+    font-size:3.2rem;
+    font-weight:400;
+    line-height:1.12;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--gold);
+  }
+  .hero p{
+    margin-top:22px;
+    max-width:46ch;
+    color:var(--muted);
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    font-size:1.02rem;
+  }
+  .hero-mark{
+    justify-self:end;
+    width:180px;
+    height:180px;
+    border:1px solid var(--gold);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    font-size:0.75rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--deep);
+    text-align:center;
+    padding:10px;
+  }
+  .cta-row{
+    margin-top:32px;
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+  .btn{
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    display:inline-block;
+    padding:13px 26px;
+    text-decoration:none;
+    font-size:0.9rem;
+    letter-spacing:0.04em;
+    border-radius:2px;
+  }
+  .btn-primary{
+    background:var(--deep);
+    color:var(--paper);
+  }
+  .btn-outline{
+    border:1px solid var(--deep);
+    color:var(--deep);
+  }
+
+  section{padding:70px 6vw;}
+  .section-title{
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.15em;
+    font-size:0.78rem;
+    color:var(--gold);
+    margin-bottom:10px;
+  }
+  h2{font-size:2rem; font-weight:400; margin-bottom:36px;}
+
+  .pillars{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .pillar{
+    background:var(--paper);
+    padding:40px;
+  }
+  .pillar h3{
+    font-size:1.4rem;
+    font-weight:400;
+    margin-bottom:14px;
+  }
+  .pillar p{
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    color:var(--muted);
+    font-size:0.95rem;
+  }
+  .pillar .tag{
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    font-size:0.72rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--gold);
+    display:block;
+    margin-bottom:10px;
+  }
+
+  .about{
+    background:var(--deep);
+    color:var(--paper);
+  }
+  .about h2{color:var(--paper);}
+  .about p{
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    color:#c9cfda;
+    max-width:70ch;
+    font-size:1rem;
+  }
+
+  .contact{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+  }
+  .contact-card{
+    border:1px solid var(--line);
+    padding:36px;
+  }
+  .contact-card .tag{
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    font-size:0.72rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--gold);
+    display:block;
+    margin-bottom:14px;
+  }
+  .contact-card a{
+    color:var(--ink);
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    font-size:1.05rem;
+    text-decoration:none;
+    display:block;
+    margin-bottom:8px;
+  }
+  .contact-card a:hover{color:var(--gold);}
+
+  footer{
+    padding:30px 6vw;
+    border-top:1px solid var(--line);
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    font-size:0.82rem;
+    color:var(--muted);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  @media (max-width:760px){
+    .hero{grid-template-columns:1fr;}
+    .hero-mark{justify-self:start;}
+    .hero h1{font-size:2.2rem;}
+    .pillars{grid-template-columns:1fr;}
+    .contact{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">OmniCore <span>Solution</span> Pvt Ltd</div>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Sound advice.<br><em>Real</em> impact.</h1>
+    <p>OmniCore Solution Pvt Ltd brings together practical consultancy and purposeful giving — helping businesses make sound decisions while supporting causes that matter.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="mailto:omnicoresolutionpvtltd@gmail.com">Get in touch</a>
+      <a class="btn btn-outline" href="#services">Our services</a>
+    </div>
+  </div>
+  <div class="hero-mark">Consultancy &amp; Donations</div>
+</section>
+
+<section id="services">
+  <div class="section-title">What we do</div>
+  <h2>Two focuses, one purpose</h2>
+  <div class="pillars">
+    <div class="pillar">
+      <span class="tag">Consultancy</span>
+      <h3>Business &amp; Advisory Services</h3>
+      <p>We offer practical, straightforward consultancy to help individuals and businesses navigate decisions with clarity — from planning to execution.</p>
+    </div>
+    <div class="pillar">
+      <span class="tag">Donations</span>
+      <h3>Giving with Purpose</h3>
+      <p>We facilitate and channel donations toward causes that create genuine, lasting impact in the communities we serve.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="section-title">About us</div>
+  <h2>Built on trust</h2>
+  <p>OmniCore Solution Pvt Ltd was founded on a simple belief: good advice and generosity go hand in hand. We work closely with our clients and partners to deliver consultancy that's honest and useful, while supporting donation efforts that give back where it counts.</p>
+</section>
+
+<section id="contact">
+  <div class="section-title">Get in touch</div>
+  <h2>Contact us</h2>
+  <div class="contact">
+    <div class="contact-card">
+      <span class="tag">Email</span>
+      <a href="mailto:omnicoresolutionpvtltd@gmail.com">omnicoresolutionpvtltd@gmail.com</a>
+    </div>
+    <div class="contact-card">
+      <span class="tag">Phone</span>
+      <a href="tel:+919266440255">+91 92664 40255</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>&copy; 2026 OmniCore Solution Pvt Ltd. All rights reserved.</div>
+  <div>Consultancy &amp; Donations</div>
+</footer>
+
+</body>
+</html>
